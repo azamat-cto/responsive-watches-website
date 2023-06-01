@@ -5,11 +5,7 @@ import { Navbar } from '../Navbar'
 import { ShoppingBag } from '../ShoppingBag'
 import { OpenDrawer } from '../OpenDrawer'
 
-export const Header = ({
-  handleDrawerOpen
-}: {
-  handleDrawerOpen: () => void
-}) => {
+export const Header = () => {
   return (
     <StyledAppBar>
       <StyledToolbar>
@@ -17,7 +13,7 @@ export const Header = ({
         <Navbar />
         <Box>
           <ShoppingBag />
-          <OpenDrawer handleDrawerOpen={handleDrawerOpen} />
+          <OpenDrawer />
         </Box>
       </StyledToolbar>
     </StyledAppBar>
