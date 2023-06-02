@@ -1,0 +1,35 @@
+.story {
+
+  &__grid {
+    row-gap: 7.5rem;
+  }
+
+  &__title {
+    font-size: var(--h1-font-size);
+    margin-bottom: 1rem;
+  }
+
+  &__description {
+    margin-bottom: 2.5rem;
+  }
+
+  &__images {
+    position: relative;
+  }
+
+  &__img,
+  &__square {
+    width: 250px;
+  }
+
+  &__square {
+    height: 250px;
+    background-color: var(--first-color);
+  }
+
+  &__img {
+    position: absolute;
+    left: 3rem;
+    top: -3rem;
+  }
+}
