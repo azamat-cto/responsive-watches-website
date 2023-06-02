@@ -1,11 +1,19 @@
+import { Provider } from 'react-redux'
+import { store } from './store/store.ts'
 import { createTheme, ThemeProvider } from '@mui/material/styles'
 import CssBaseline from '@mui/material/CssBaseline'
 import { Header } from './components/Header'
+import { Home } from './components/Home'
 import { Drawer } from './components/Dawer'
-import { Provider } from 'react-redux'
-import { store } from './store/store.ts'
 
-const theme = createTheme({})
+const theme = createTheme({
+  typography: {
+    body1: {
+      lineHeight: 'initial',
+      letterSpacing: 'initial'
+    }
+  }
+})
 
 function App() {
   return (
@@ -13,6 +21,9 @@ function App() {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <Header />
+        <main className="main">
+          <Home />
+        </main>
         <Drawer />
       </ThemeProvider>
     </Provider>

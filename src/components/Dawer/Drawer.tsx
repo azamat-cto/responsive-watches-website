@@ -1,11 +1,4 @@
-import {
-  StyledDrawer,
-  StyledLink,
-  StyledList,
-  StyledListItem,
-  StyledNav
-} from './styled.tsx'
-import { CloseDrawer } from '../CloseDrawer'
+import { StyledDrawer } from './styled.tsx'
 import { links } from '../../constants'
 import { useAppDispatch, useAppSelector } from '../../store/hooks.ts'
 import { toggleDrawer } from '../../store/slices/drawerSlice.ts'
@@ -20,21 +13,28 @@ export const Drawer = () => {
       open={isOpen}
       onClose={() => dispatch(toggleDrawer(false))}
     >
-      <StyledNav component="nav">
-        <StyledList>
+      <nav className="drawer-nav">
+        <ul className="drawer-nav__list">
           {links.map((link) => (
-            <StyledListItem key={link.key}>
-              <StyledLink
+            <li className="drawer-nav__item" key={link.key}>
+              <a
+                className="drawer-nav__link"
                 href={link.url}
                 onClick={() => dispatch(toggleDrawer(false))}
               >
                 {link.label}
-              </StyledLink>
-            </StyledListItem>
+              </a>
+            </li>
           ))}
-        </StyledList>
-      </StyledNav>
-      <CloseDrawer />
+        </ul>
+      </nav>
+      <button
+        className="drawer-nav__close"
+        type="button"
+        onClick={() => dispatch(toggleDrawer(false))}
+      >
+        <i className="bx bx-x"></i>
+      </button>
     </StyledDrawer>
   )
 }
