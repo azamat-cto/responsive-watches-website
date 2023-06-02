@@ -1,6 +1,10 @@
 import Testimonials1 from '../assets/images/testimonial1.jpg'
 import Testimonials2 from '../assets/images/testimonial2.jpg'
 import Testimonials3 from '../assets/images/testimonial3.jpg'
+import New1 from '../assets/images/new1.png'
+import New2 from '../assets/images/new2.png'
+import New3 from '../assets/images/new3.png'
+import New4 from '../assets/images/new4.png'
 
 export const links = [
   {
@@ -52,5 +56,32 @@ export const testimonials = [
     img: Testimonials3,
     name: 'Raul Zaman',
     detail: 'Director of a company'
+  }
+]
+
+export const items = [
+  {
+    key: 'new1',
+    title: 'Longines rose',
+    img: New1,
+    price: '$980'
+  },
+  {
+    key: 'new2',
+    title: 'Jazzmaster',
+    img: New2,
+    price: '$1150'
+  },
+  {
+    key: 'new3',
+    title: 'Dreyfuss gold',
+    img: New3,
+    price: '$750'
+  },
+  {
+    key: 'new4',
+    title: 'Portuguese rose',
+    img: New4,
+    price: '$1590'
   }
 ]

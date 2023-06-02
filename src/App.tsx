@@ -8,6 +8,7 @@ import { Featured } from './components/Featured'
 import { Story } from './components/Story'
 import { Products } from './components/Products'
 import { Testimonials } from './components/Testimonials'
+import { New } from './components/New'
 import { Drawer } from './components/Dawer'
 
 const theme = createTheme({
@@ -31,6 +32,7 @@ function App() {
           <Story />
           <Products />
           <Testimonials />
+          <New />
         </main>
         <Drawer />
       </ThemeProvider>
