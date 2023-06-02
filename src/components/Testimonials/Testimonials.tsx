@@ -2,6 +2,7 @@ import { Container } from '@mui/material'
 import TestimonialPng from '../../assets/images/testimonial.png'
 import { testimonials } from '../../constants'
 import { Swiper, SwiperSlide } from 'swiper/react'
+// @ts-ignore
 import { Navigation } from 'swiper'
 
 export const Testimonials = () => {
