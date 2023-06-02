@@ -12,11 +12,7 @@ export const Featured = () => {
           <article className="featured__card">
             <span className="featured__tag">Sale</span>
 
-            <img
-              src={Featured1}
-              alt=""
-              className="featured__img"
-            />
+            <img src={Featured1} alt="" className="featured__img" />
 
             <div className="featured__data">
               <h3 className="featured__title">Jazzmaster</h3>
@@ -29,11 +25,7 @@ export const Featured = () => {
           <article className="featured__card">
             <span className="featured__tag">Sale</span>
 
-            <img
-              src={Featured2}
-              alt=""
-              className="featured__img"
-            />
+            <img src={Featured2} alt="" className="featured__img" />
 
             <div className="featured__data">
               <h3 className="featured__title">Ingersoll</h3>
@@ -46,11 +38,7 @@ export const Featured = () => {
           <article className="featured__card">
             <span className="featured__tag">Sale</span>
 
-            <img
-              src={Featured3}
-              alt=""
-              className="featured__img"
-            />
+            <img src={Featured3} alt="" className="featured__img" />
 
             <div className="featured__data">
               <h3 className="featured__title">Rose gold</h3>
