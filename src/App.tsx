@@ -4,6 +4,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles'
 import CssBaseline from '@mui/material/CssBaseline'
 import { Header } from './components/Header'
 import { Home } from './components/Home'
+import { Featured } from './components/Featured'
 import { Drawer } from './components/Dawer'
 
 const theme = createTheme({
@@ -23,6 +24,7 @@ function App() {
         <Header />
         <main className="main">
           <Home />
+          <Featured />
         </main>
         <Drawer />
       </ThemeProvider>
