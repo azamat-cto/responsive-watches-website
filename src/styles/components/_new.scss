@@ -18,18 +18,12 @@
       background-color: var(--button-color);
     }
 
-    &:hover .new__button {
-      transform: translateY(0);
-      opacity: 1;
-    }
-
     &:hover .new__title {
       color: hsl(0, 0%, 15%);
     }
 
     &:hover .new__price {
       color: hsl(0, 0%, 15%);
-      margin-bottom: 1.5rem;
     }
   }
 
@@ -66,11 +60,10 @@
     display: block;
     color: var(--first-color);
     transition: 0.3s;
+    margin-bottom: 1.5rem;
   }
 
   &__button {
     font-size: var(--small-font-size);
-    transform: translateY(1rem);
-    opacity: 0;
   }
 }
