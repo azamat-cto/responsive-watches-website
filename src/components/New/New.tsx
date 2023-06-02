@@ -24,7 +24,7 @@ export const New = () => {
         <h2 className="section__title">New Arrivals</h2>
 
         <div className="new__grid grid">
-          <Carousel responsive={responsive}>
+          <Carousel responsive={responsive} arrows={false}>
             {items.map((item) => (
               <article className="new__card" key={item.key}>
                 <span className="new__tag">New</span>
