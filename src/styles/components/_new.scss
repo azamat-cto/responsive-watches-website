@@ -53,14 +53,4 @@
   &__button {
     font-size: var(--small-font-size);
   }
-
-  .swiper {
-    margin-left: initial;
-    margin-right: initial;
-  }
-
-  .swiper-button-prev:after,
-  .swiper-button-next:after {
-    content: '';
-  }
 }
