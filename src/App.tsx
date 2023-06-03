@@ -10,6 +10,7 @@ import { Products } from './components/Products'
 import { Testimonials } from './components/Testimonials'
 import { New } from './components/New'
 import { Newsletter } from './components/Newsletter'
+import { Footer } from './components/Footer'
 import { Drawer } from './components/Dawer'
 
 const theme = createTheme({
@@ -36,6 +37,7 @@ function App() {
           <New />
           <Newsletter />
         </main>
+        <Footer />
         <Drawer />
       </ThemeProvider>
     </Provider>
