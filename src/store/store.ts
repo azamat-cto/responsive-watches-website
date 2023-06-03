@@ -1,9 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit'
 import drawerReducer from './slices/drawerSlice.ts'
+import cartReducer from './slices/cartSlice.ts'
 
 export const store = configureStore({
   reducer: {
-    drawer: drawerReducer
+    drawer: drawerReducer,
+    cart: cartReducer
   }
 })
 
