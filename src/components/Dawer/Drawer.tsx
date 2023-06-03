@@ -2,6 +2,7 @@ import { StyledDrawer } from './styled.tsx'
 import { links } from '../../constants'
 import { useAppDispatch, useAppSelector } from '../../store/hooks.ts'
 import { toggleDrawer } from '../../store/slices/drawerSlice.ts'
+import { Link as ScrollLink } from 'react-scroll'
 
 export const Drawer = () => {
   const { isOpen } = useAppSelector((state) => state.drawer)
@@ -17,13 +18,19 @@ export const Drawer = () => {
         <ul className="drawer-nav__list">
           {links.map((link) => (
             <li className="drawer-nav__item" key={link.key}>
-              <a
+              <ScrollLink
                 className="drawer-nav__link"
-                href={link.url}
+                href={`#${link.url}`}
                 onClick={() => dispatch(toggleDrawer(false))}
+                activeClass="active"
+                to={link.key}
+                spy={true}
+                smooth={true}
+                offset={0}
+                duration={400}
               >
                 {link.label}
-              </a>
+              </ScrollLink>
             </li>
           ))}
         </ul>

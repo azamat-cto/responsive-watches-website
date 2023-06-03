@@ -3,6 +3,7 @@ import { Container } from '@mui/material'
 import { links } from '../../constants'
 import { toggleDrawer } from '../../store/slices/drawerSlice.ts'
 import { useAppDispatch } from '../../store/hooks.ts'
+import { Link as ScrollLink } from 'react-scroll'
 
 export const Header = () => {
   const [bgColor, setBgColor] = useState(false)
@@ -37,9 +38,18 @@ export const Header = () => {
             <ul className="nav__list">
               {links.map((link) => (
                 <li className="nav__item" key={link.key}>
-                  <a className="nav__link" href={link.url}>
+                  <ScrollLink
+                    className="nav__link"
+                    href={`#${link.url}`}
+                    activeClass="active"
+                    to={link.key}
+                    spy={true}
+                    smooth={true}
+                    offset={0}
+                    duration={400}
+                  >
                     {link.label}
-                  </a>
+                  </ScrollLink>
                 </li>
               ))}
             </ul>

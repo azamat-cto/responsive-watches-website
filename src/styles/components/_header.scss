@@ -62,4 +62,12 @@
   @media screen and (min-width: 767px) {
     display: block;
   }
+
+  &__link {
+
+    &.active {
+      color: var(--first-color);
+    }
+
+  }
 }
