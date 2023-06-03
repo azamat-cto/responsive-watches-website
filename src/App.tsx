@@ -12,6 +12,7 @@ import { New } from './components/New'
 import { Newsletter } from './components/Newsletter'
 import { Footer } from './components/Footer'
 import { Drawer } from './components/Dawer'
+import { useEffect } from 'react'
 
 const theme = createTheme({
   typography: {
@@ -23,6 +24,23 @@ const theme = createTheme({
 })
 
 function App() {
+  const scrollUp = () => {
+    const scrollUp = document.getElementById('scroll-up')
+    if (scrollUp) {
+      window.scrollY >= 350
+        ? scrollUp.classList.add('show-scroll')
+        : scrollUp.classList.remove('show-scroll')
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', scrollUp)
+
+    return () => {
+      window.removeEventListener('scroll', scrollUp)
+    }
+  }, [])
+
   return (
     <Provider store={store}>
       <ThemeProvider theme={theme}>
@@ -38,6 +56,13 @@ function App() {
           <Newsletter />
         </main>
         <Footer />
+        <button
+          className="scrollup"
+          id="scroll-up"
+          onClick={() => window.scrollTo(0, 0)}
+        >
+          <i className="bx bx-up-arrow-alt scrollup__icon"></i>
+        </button>
         <Drawer />
       </ThemeProvider>
     </Provider>
