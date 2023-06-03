@@ -5,10 +5,13 @@ import { toggleDrawer } from '../../store/slices/drawerSlice.ts'
 import { useAppDispatch } from '../../store/hooks.ts'
 import { Link as ScrollLink } from 'react-scroll'
 import { toggleCart } from '../../store/slices/cartSlice.ts'
+import { useTheme } from '@mui/material/styles'
+import { toggleTheme } from '../../store/slices/themeSlice.ts'
 
 export const Header = () => {
   const [bgColor, setBgColor] = useState(false)
   const dispatch = useAppDispatch()
+  const theme = useTheme()
 
   useEffect(() => {
     const scrollHeader = () => {
@@ -58,12 +61,25 @@ export const Header = () => {
 
           <div className="header__btns">
             <button
+              className="change-theme"
+              type="button"
+              onClick={() => dispatch(toggleTheme())}
+            >
+              {theme.palette.mode === 'dark' ? (
+                <i className="bx bx-sun"></i>
+              ) : (
+                <i className="bx bx-moon"></i>
+              )}
+            </button>
+
+            <button
               className="header__shop"
               type="button"
               onClick={() => dispatch(toggleCart(true))}
             >
               <i className="bx bx-shopping-bag"></i>
             </button>
+
             <button
               className="header__toggle"
               type="button"
