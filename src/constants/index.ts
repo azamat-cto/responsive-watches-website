@@ -5,6 +5,9 @@ import New1 from '../assets/images/new1.png'
 import New2 from '../assets/images/new2.png'
 import New3 from '../assets/images/new3.png'
 import New4 from '../assets/images/new4.png'
+import Featured1 from '../assets/images/featured1.png'
+import Featured2 from '../assets/images/featured2.png'
+import Featured3 from '../assets/images/featured3.png'
 
 export const links = [
   {
@@ -83,5 +86,29 @@ export const items = [
     title: 'Portuguese rose',
     img: New4,
     price: '$1590'
+  }
+]
+
+export const carts = [
+  {
+    key: 'jazzmaster',
+    img: Featured1,
+    title: 'Jazzmaster',
+    price: 1050,
+    amount: 1
+  },
+  {
+    key: 'rosegold',
+    img: Featured2,
+    title: 'Rose Gold',
+    price: 850,
+    amount: 1
+  },
+  {
+    key: 'longinesgold',
+    img: Featured3,
+    title: 'Longines Rose',
+    price: 980,
+    amount: 1
   }
 ]

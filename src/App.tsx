@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { Provider } from 'react-redux'
 import { store } from './store/store.ts'
 import { createTheme, ThemeProvider } from '@mui/material/styles'
@@ -11,8 +12,8 @@ import { Testimonials } from './components/Testimonials'
 import { New } from './components/New'
 import { Newsletter } from './components/Newsletter'
 import { Footer } from './components/Footer'
+import { Cart } from './components/Cart'
 import { Drawer } from './components/Dawer'
-import { useEffect } from 'react'
 
 const theme = createTheme({
   typography: {
@@ -63,6 +64,7 @@ function App() {
         >
           <i className="bx bx-up-arrow-alt scrollup__icon"></i>
         </button>
+        <Cart />
         <Drawer />
       </ThemeProvider>
     </Provider>

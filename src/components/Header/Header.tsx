@@ -4,6 +4,7 @@ import { links } from '../../constants'
 import { toggleDrawer } from '../../store/slices/drawerSlice.ts'
 import { useAppDispatch } from '../../store/hooks.ts'
 import { Link as ScrollLink } from 'react-scroll'
+import { toggleCart } from '../../store/slices/cartSlice.ts'
 
 export const Header = () => {
   const [bgColor, setBgColor] = useState(false)
@@ -56,7 +57,11 @@ export const Header = () => {
           </nav>
 
           <div className="header__btns">
-            <button className="header__shop" type="button">
+            <button
+              className="header__shop"
+              type="button"
+              onClick={() => dispatch(toggleCart(true))}
+            >
               <i className="bx bx-shopping-bag"></i>
             </button>
             <button
